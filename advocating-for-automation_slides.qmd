@@ -1,0 +1,182 @@
+---
+format: 
+  revealjs: 
+    theme: default
+    footer: "Hannah Podzorski // rstudio::conf(2022) // July 27, 2022"
+    logo: https://www.gsienv.com/wp-content/uploads/2021/06/GSI-Logo-White.svg
+editor: visual
+---
+
+# Advocating for Automation: 
+
+## Adapting Current Tools in Environmental Science through R {style = 'font-family: Arial, Helvetica, sans-serif'}
+
+Hannah Podzorski
+
+# Why Automate?
+
+::: notes
+Paint a picture of your colleague.
+:::
+
+# 
+
+![](./images/automation_meme.png){fig-align="center"}
+
+::: notes
+Programmers get a bad rap
+:::
+
+## Reducing the Activation Energy {auto-animate="true"}
+
+```{r}
+source("./R/reaction-energy.R")
+
+p1
+```
+
+## Reducing the Activation Energy {auto-animate="true"}
+
+```{r}
+p2
+```
+
+# Disclaimer
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-1.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-2.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-3.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-4.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-5.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-5.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-2.png){fig-align="left"}
+
+## Differences in Workflow
+
+Reactionary Workflow
+
+![](./images/reaction_diagram-5.png){fig-align="left"}
+
+Automated Workflow ![](./images/automate_diagram-5.png){fig-align="left"}
+
+# Where to Start?
+
+## {openxlsx}
+
+```{r, eval = FALSE, echo = TRUE}
+write.csv(data, "data.csv")
+```
+
+## {openxlsx}
+
+```{r, eval = FALSE, echo = TRUE}
+#| code-line-numbers: "3"
+write.csv(data, "data.csv")
+
+openxlsx::write.xlsx(data, "data.xlsx")
+```
+
+## {openxlsx}
+
+```{r, eval = FALSE, echo = TRUE}
+#| code-line-numbers: "3"
+write.csv(data, "data.csv")
+
+openxlsx::write.xlsx(data, "data.xlsx")
+```
+
+![](./images/excel_formatted_table.png){fig-align="center"}
+
+::: aside
+Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.
+:::
+
+## {officer}
+
+```{r, eval = FALSE, echo = TRUE}
+library(officer)
+
+plot <- rvg::dml(ggobj = plot)
+
+pptx <-read_pptx() %>%
+  add_slide() %>%
+  ph_with(plot, ph_location(left = 1.3, top = 0.4, width = 8.75, height = 6.9))
+
+print(pptx, "./R/Fig-Example.pptx")
+```
+
+## {officer}
+
+![](./images/Figure_Example.png){fig-align="center"}
+
+# Delayed Gratification
+
+## ProUCL
+
+::: columns
+::: {.column width="60%"}
+-   Statistical Software for Censored Environmental Data
+    -   Calculates Upper Confidence Limits (UCLs)
+-   Developed by the U.S Environmental Protection Agency (EPA)
+:::
+
+::: {.column width="40%"}
+![](./images/EPA.png){fig-align="center"}
+:::
+:::
+
+## ProUCL Automation
+
+<iframe width="100%" height="100%" src="./images/ProUCL_Video.mp4" frameborder="0">
+
+</iframe>
+
+## ProUCL Output
+
+![](./images/ProUCL_Output.png){fig-align="center"}
+
+# Conclusions
+
+-   Communication is key.
+-   It's ok to start small.
+-   All skill sets welcome!

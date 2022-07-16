@@ -1,0 +1,19 @@
+# Reactionary Workflow
+flowchart LR
+  A(A*) -.- B(B*)
+  B -.- C(C*)
+  C -.- D(D*)
+  style A fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style B fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style C fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style D fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+
+# Automated Worflow
+flowchart LR
+  A(A*)-- "f(x)" --> B(B)
+  B -- "f(x)" --> C(C)
+  C -- "f(x)" --> D(D)
+  style A fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style B fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style C fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
+  style D fill:#ECF1F5,stroke:#005782,stroke-width:2px,color:#636363
