@@ -1,113 +1,145 @@
 ---
 format: 
   revealjs: 
-    theme: default
-    footer: "Hannah Podzorski // rstudio::conf(2022) // July 27, 2022"
-    logo: https://www.gsienv.com/wp-content/uploads/2021/06/GSI-Logo-White.svg
+    theme: GSI_theme.scss
+    logo: ./images/gsi_logo.png
 editor: visual
 ---
 
-# Advocating for Automation: 
+#  {background-image="images/gsi_background.jpg"}
 
-## Adapting Current Tools in Environmental Science through R {style = 'font-family: Arial, Helvetica, sans-serif'}
+::: columns
+::: {.column width="65%"}
+[**Advocating for Automation:**]{style="font-size: 2em; color:#FFFFFF;"}
 
-Hannah Podzorski
+[*Adapting Current Tools in Environmental Science through R*]{style="font-size: 1.5em; color:#FFFFFF;"}
+:::
 
-# Why Automate?
+::: {.column width="35%"}
+![](./images/gsi_logo_white.png){fig-align="right"}
 
-::: notes
-Paint a picture of your colleague.
+::: {style="text-align: right; background-color: #EB7C32; padding:10px; border-radius: 25px;"}
+[Hannah Podzorski]{style="font-size: 1em; color:#FFFFFF;"}
+
+[rstudio::conf(2022)]{style="font-size: 1em; color:#FFFFFF;"}
+
+[July 27, 2022]{style="font-size: 1em; color:#FFFFFF"}
+:::
+:::
+:::
+
+# [Why Automate?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+
+![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
 :::
 
 # 
 
-![](./images/automation_meme.png){fig-align="center"}
+![[https://www.reddit.com/r/ProgrammerHumor/comments/f0ag3i/automation/]{style="color:#BFBFBF; font-size:0.5em"}](./images/automation_meme.png){fig-align="center"}
 
-::: notes
-Programmers get a bad rap
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
 ## Reducing the Activation Energy {auto-animate="true"}
 
+::: r-stack
 ```{r}
 source("./R/reaction-energy.R")
-
 p1
 ```
 
-## Reducing the Activation Energy {auto-animate="true"}
-
+::: fragment
 ```{r}
 p2
 ```
+:::
+:::
 
-# Disclaimer
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
 
-## Differences in Workflow
+
+# [Let's Start with the Pitch]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+
+![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+## Differences in Workflow {auto-animate="true"}
 
 Reactionary Workflow
 
+::: r-stack
 ![](./images/reaction_diagram-1.png){fig-align="left"}
 
-Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
-
-## Differences in Workflow
-
-Reactionary Workflow
-
+::: fragment
 ![](./images/reaction_diagram-2.png){fig-align="left"}
+:::
 
-Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
-
-## Differences in Workflow
-
-Reactionary Workflow
-
+::: fragment
 ![](./images/reaction_diagram-3.png){fig-align="left"}
+:::
 
-Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
-
-## Differences in Workflow
-
-Reactionary Workflow
-
+::: fragment
 ![](./images/reaction_diagram-4.png){fig-align="left"}
+:::
 
-Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
-
-## Differences in Workflow
-
-Reactionary Workflow
-
+::: fragment
 ![](./images/reaction_diagram-5.png){fig-align="left"}
+:::
+:::
 
-Automated Workflow ![](./images/automate_diagram-1.png){fig-align="left"}
+Automated Workflow
 
-## Differences in Workflow
+::: r-stack
+::: fragment
+![](./images/automate_diagram-1.png){fig-align="left"}
+:::
 
-Reactionary Workflow
+::: fragment
+![](./images/automate_diagram-2.png){fig-align="left"}
+:::
 
-![](./images/reaction_diagram-5.png){fig-align="left"}
+::: fragment
+![](./images/automate_diagram-5.png){fig-align="left"}
+:::
+:::
 
-Automated Workflow ![](./images/automate_diagram-2.png){fig-align="left"}
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
 
-## Differences in Workflow
+# [Where to Start?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
-Reactionary Workflow
+::: {style="color:#FFFFFF;"}
+-   Start small, task can be automated in the same amount of time as the original task.
+-   Meet team members where they are.
+:::
 
-![](./images/reaction_diagram-5.png){fig-align="left"}
+![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
 
-Automated Workflow ![](./images/automate_diagram-5.png){fig-align="left"}
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
 
-# Where to Start?
-
-## {openxlsx}
+## {openxlsx} {auto-animate="true"}
 
 ```{r, eval = FALSE, echo = TRUE}
 write.csv(data, "data.csv")
 ```
 
-## {openxlsx}
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+## {openxlsx} {auto-animate="true"}
 
 ```{r, eval = FALSE, echo = TRUE}
 #| code-line-numbers: "3"
@@ -116,23 +148,19 @@ write.csv(data, "data.csv")
 openxlsx::write.xlsx(data, "data.xlsx")
 ```
 
-## {openxlsx}
+::: fragment
+::: {layout="[[-1], [1], [-1]]"}
+![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/excel_formatted_table.png){fig-align="center"}
+:::
+:::
 
-```{r, eval = FALSE, echo = TRUE}
-#| code-line-numbers: "3"
-write.csv(data, "data.csv")
-
-openxlsx::write.xlsx(data, "data.xlsx")
-```
-
-![](./images/excel_formatted_table.png){fig-align="center"}
-
-::: aside
-Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
 ## {officer}
 
+::: {layout="[[-1], [1], [-1]]"}
 ```{r, eval = FALSE, echo = TRUE}
 library(officer)
 
@@ -144,39 +172,129 @@ pptx <-read_pptx() %>%
 
 print(pptx, "./R/Fig-Example.pptx")
 ```
+:::
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
 
 ## {officer}
 
-![](./images/Figure_Example.png){fig-align="center"}
+<iframe width="100%" height="100%" src="./images/officer_example.mp4" frameborder="0">
 
-# Delayed Gratification
+</iframe>
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+# [Delayed Gratification]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+
+![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
 
 ## ProUCL
 
 ::: columns
 ::: {.column width="60%"}
--   Statistical Software for Censored Environmental Data
+-   Statistical Software for Left Censored Environmental Data
     -   Calculates Upper Confidence Limits (UCLs)
 -   Developed by the U.S Environmental Protection Agency (EPA)
 :::
 
 ::: {.column width="40%"}
+::: {layout="[[-1], [1], [-1]]"}
 ![](./images/EPA.png){fig-align="center"}
 :::
+:::
+:::
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
 ## ProUCL Automation
 
-<iframe width="100%" height="100%" src="./images/ProUCL_Video.mp4" frameborder="0">
+<iframe width="100%" height="100%" src="./images/ProUCL_Demo.mp4" frameborder="0">
 
 </iframe>
 
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
 ## ProUCL Output
 
-![](./images/ProUCL_Output.png){fig-align="center"}
+![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/ProUCL_Output.png){fig-align="center"}
 
-# Conclusions
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
 
--   Communication is key.
--   It's ok to start small.
--   All skill sets welcome!
+# [Final Thoughts]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"} 
+:::{style="color:#FFFFFF;"} 
+- It's ok to start small.
+- All skill sets welcome! 
+- Focus on communication.
+:::
+
+![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+#  {background-image="images/gsi_background.jpg"}
+
+::: columns
+::: {.column width="45%"}
+[**Questions?**]{style="font-size: 2em; color:#FFFFFF;"}
+
+::: {style="color:#FFFFFF;"}
+::: {layout="[[-1], [1], [-1]]"}
+**GitHub Repo:** 
+*github.com/* 
+*hannahpodzorski/* 
+*advocating-for-automation*
+:::
+:::
+:::
+
+::: {.column width="55%"}
+![](./images/gsi_logo_white.png){fig-align="right"}
+
+::: {style="text-align: right; background-color: #EB7C32; padding:10px; border-radius: 25px; font-size: 1em; color:#FFFFFF;"}
+Contact Information:
+
+hpodzorski@gsi-net.com
+
+twitter - @hpodz
+
+github - hannahpodzorski
+:::
+:::
+:::
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+# Agenda
+
+::: {style="background-color: #005782; padding:10px; border-radius: 25px; color:#FFFFFF;"}
+-   Developing a 'Pitch'
+-   Where to start?
+-   Unconventional Automation (Case Study)
+:::
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+::: {style="background-color: #EB7C32; padding:20px;"}
+# DISCLAIMER
+:::
+

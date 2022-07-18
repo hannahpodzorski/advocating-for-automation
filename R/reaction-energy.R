@@ -2,7 +2,7 @@
 
 library(tidyverse)
 
-gsi_colors <- c("blue" = "#1C6EAC", "dark-blue" = "#005782")
+gsi_colors <- c("blue" = "#1C6EAC", "dark-blue" = "#005782", orange = "#EB7C32")
 # Parabolic functions
 para_1 <- function(x){
   h = 500 # x-coordinate of vertex
@@ -35,19 +35,19 @@ d1 <- data.frame(x = x,
                       rep.int(para_1(800), 400)))
 
 d2 <- data.frame(x = x,
-                 y = c(rep.int(NA, 249), 
+                 y = c(rep.int(para_1(250), 249), 
                        para_2(x[250:500]),
                        para_3(x[501:800]),
-                       rep.int(NA, 400)))
+                       rep.int(para_1(800), 400)))
 
 p1 <- ggplot() + 
   # Add Parabolas
   geom_path(data = d1, aes(x,y), size = 3) +
   # Add Starting and Ending Points
   geom_point(aes(x = 125, y = 200), size = 25, shape = 21, stroke = 2,
-             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"]) +
+             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"], alpha = 0.8) +
   geom_point(aes(x = 1000, y = 24), size = 25, shape = 21, stroke = 2,
-             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"]) +
+             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"], alpha = 0.8) +
   annotate("text", x = 125, y = para_1(250), 
            label = "Current\nWorkflow", 
            vjust = 1.25, hjust = 0.5, size = 8) +
@@ -76,13 +76,13 @@ p1 <- ggplot() +
 
 p2 <- ggplot() + 
   # Add Parabolas
-  geom_path(data = d1, aes(x,y), size = 3) +
-  geom_path(data = d2, aes(x,y), size = 2, color = "grey") + 
+  geom_path(data = d1, aes(x,y), size = 3, color = "grey") +
+  geom_path(data = d2, aes(x,y), size = 2) + 
   # Add Starting and Ending Points
   geom_point(aes(x = 125, y = 200), size = 25, shape = 21, stroke = 2,
-             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"]) +
+             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"], alpha = 0.8) +
   geom_point(aes(x = 1000, y = 24), size = 25, shape = 21, stroke = 2,
-             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"]) +
+             color = gsi_colors["dark-blue"], fill = gsi_colors["blue"], alpha = 0.8) +
   annotate("text", x = 125, y = para_1(250), 
            label = "Current\nWorkflow", 
            vjust = 1.25, hjust = 0.5, size = 8) +

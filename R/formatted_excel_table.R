@@ -8,17 +8,7 @@ library(openxlsx)
 library(lubridate)
 
 # Load data ---------------
-# df <- read.csv("./data/gama_2022-07-01.csv")
-# 
-# d_BTEX <- df %>% filter(gm_chemical_name %in% c("Benzene", "Toluene", "Ethylbenzene", "Xylenes (total)")) %>%
-#   select(gm_well_id, gm_samp_collection_date, gm_chemical_name, gm_result, gm_result_units, gm_result_modifier, gm_reporting_limit)
-# 
-# write.csv(d_BTEX, "./data/gama_2022-07-01_BTEX.csv", row.names = F)
-# 
-# d_cations <- df %>% filter(gm_chemical_name %in% c("Calcium", "Chloride", "Fluoride", "Magnesium", "Potassium", "Sodium")) %>%
-#   select(gm_well_id, gm_samp_collection_date, gm_chemical_name, gm_result, gm_result_units, gm_result_modifier, gm_reporting_limit)
-# 
-# write.csv(d_cations, "./data/gama_2022-07-01_ions.csv", row.names = F)
+
 
 d <- read.csv("./data/gama_2022-07-01_ions.csv")
 
