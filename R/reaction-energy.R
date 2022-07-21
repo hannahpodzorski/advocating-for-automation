@@ -62,7 +62,7 @@ p1 <- ggplot() +
                size = 1.5, color = "grey") +
   annotate("text", x = 800, y = 300, label = "Activation Energy", size = 6, hjust = -0.1) +
   # Axes
-  labs(x = "Pathway", y = "Total Energy") +
+  labs(x = "Progress", y = "Total Energy") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(limit = c(-250, 500)) +
   # Themeing
@@ -97,7 +97,7 @@ p2 <- ggplot() +
                size = 1.5, color = "grey") +
   annotate("text", x = 800, y = 175, label = "Activation Energy", size = 6, hjust = -0.1) +
   # Axes
-  labs(x = "Pathway", y = "Total Energy") +
+  labs(x = "Progress", y = "Total Energy") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(limit = c(-250, 500)) +
   # Themeing

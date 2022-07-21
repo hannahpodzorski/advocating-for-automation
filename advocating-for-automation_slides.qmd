@@ -30,7 +30,7 @@ editor: visual
 
 # [Why Automate?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
-![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
@@ -38,7 +38,7 @@ editor: visual
 
 # 
 
-![[https://www.reddit.com/r/ProgrammerHumor/comments/f0ag3i/automation/]{style="color:#BFBFBF; font-size:0.5em"}](./images/automation_meme.png){fig-align="center"}
+![[https://www.reddit.com/r/ProgrammerHumor/comments/f0ag3i/automation/]{style="color:#BFBFBF; font-size:0.5em"}](./images/automation_meme.png){fig-align="center" fig-alt="Confused anime dude meme, where he's a programmer confusing a basic task with something that needs automation."}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
@@ -48,12 +48,16 @@ editor: visual
 
 ::: r-stack
 ```{r}
+#| fig-alt: "Line plot showing the progress of activation energy, or the energy needed to complete a chemical reation."
+
 source("./R/reaction-energy.R")
 p1
 ```
 
 ::: fragment
 ```{r}
+#| fig-alt: "Same plot of activation energy showing that activation energy has been reduced."
+
 p2
 ```
 :::
@@ -63,10 +67,9 @@ p2
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
-
 # [Let's Start with the Pitch]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
-![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
@@ -77,22 +80,22 @@ p2
 Reactionary Workflow
 
 ::: r-stack
-![](./images/reaction_diagram-1.png){fig-align="left"}
+![](./images/reaction_diagram-1.png){fig-align="left" fig-alt="Four boxes labeled A, B, C, and D."}
 
 ::: fragment
-![](./images/reaction_diagram-2.png){fig-align="left"}
+![](./images/reaction_diagram-2.png){fig-align="left" fig-alt="Four boxes labeled A, B, C, and D with an asterisk next to A."}
 :::
 
 ::: fragment
-![](./images/reaction_diagram-3.png){fig-align="left"}
+![](./images/reaction_diagram-3.png){fig-align="left" fig-alt="Four boxes labeled A, B, C, and D with an asterisks next to A and B."}
 :::
 
 ::: fragment
-![](./images/reaction_diagram-4.png){fig-align="left"}
+![](./images/reaction_diagram-4.png){fig-align="left" fig-alt="Four boxes labeled A, B, C, and D with an asterisks next to A, B, and C."}
 :::
 
 ::: fragment
-![](./images/reaction_diagram-5.png){fig-align="left"}
+![](./images/reaction_diagram-5.png){fig-align="left" fig-alt="Four boxes labeled A, B, C, and D with an asterisks next to A, B, C, and D."}
 :::
 :::
 
@@ -100,20 +103,35 @@ Automated Workflow
 
 ::: r-stack
 ::: fragment
-![](./images/automate_diagram-1.png){fig-align="left"}
+![](./images/automate_diagram-1.png){fig-align="left" fig-alt="Four boxes connected by arrows labeled A, B, C, and D."}
 :::
 
 ::: fragment
-![](./images/automate_diagram-2.png){fig-align="left"}
+![](./images/automate_diagram-2.png){fig-align="left" fig-alt="Four boxes connected by arrows labeled A, B, C, and D with an asterisk next to A."}
 :::
 
 ::: fragment
-![](./images/automate_diagram-5.png){fig-align="left"}
+![](./images/automate_diagram-5.png){fig-align="left" fig-alt="Four boxes connected by arrows labeled A, B, C, and D with an asterisk next to A and f(X) between each box."}
 :::
 :::
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+# [Pros of Automation]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+
+::: {style="color:#FFFFFF;"}
+-   Reproducibility
+-   It can be simple!
+-   Saves time (in the long run)
+-   Less human interactive means less errors
+:::
+
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
 :::
 
 # [Where to Start?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
@@ -123,7 +141,7 @@ Automated Workflow
 -   Meet team members where they are.
 :::
 
-![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
@@ -150,7 +168,7 @@ openxlsx::write.xlsx(data, "data.xlsx")
 
 ::: fragment
 ::: {layout="[[-1], [1], [-1]]"}
-![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/excel_formatted_table.png){fig-align="center"}
+![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/excel_formatted_table.png){fig-align="center" fig-alt="Example of formatted excel table."}
 :::
 :::
 
@@ -178,6 +196,27 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+## {officer} {auto-animate="true"}
+
+::: {layout="[[-1], [1], [-1]]"}
+```{r, eval = FALSE, echo = TRUE}
+#| code-line-numbers: "3"
+library(officer)
+
+plot <- rvg::dml(ggobj = plot)
+
+pptx <-read_pptx() %>%
+  add_slide() %>%
+  ph_with(plot, ph_location(left = 1.3, top = 0.4, width = 8.75, height = 6.9))
+
+print(pptx, "./R/Fig-Example.pptx")
+```
+:::
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
 ## {officer}
 
 <iframe width="100%" height="100%" src="./images/officer_example.mp4" frameborder="0">
@@ -188,9 +227,9 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
-# [Delayed Gratification]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+# [Delayed<br>Gratification]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
-![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
@@ -207,7 +246,7 @@ print(pptx, "./R/Fig-Example.pptx")
 
 ::: {.column width="40%"}
 ::: {layout="[[-1], [1], [-1]]"}
-![](./images/EPA.png){fig-align="center"}
+![](./images/EPA.png){fig-align="center" fig-alt="EPA logo"}
 :::
 :::
 :::
@@ -228,52 +267,50 @@ print(pptx, "./R/Fig-Example.pptx")
 
 ## ProUCL Output
 
-![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/ProUCL_Output.png){fig-align="center"}
+![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/ProUCL_Output.png){fig-align="center" fig-alt="Example of the output file from ProUCL"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
-# [Final Thoughts]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"} 
-:::{style="color:#FFFFFF;"} 
-- It's ok to start small.
-- All skill sets welcome! 
-- Focus on communication.
+# [Final Thoughts]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
+
+::: {style="color:#FFFFFF;"}
+-   It's ok to start small.
+-   All skill sets welcome!
+-   Ultimate goal is to leave more time for more important tasks.
 :::
 
-![](./images/gsi_logo_white.png){.absolute top="-5em" right="0" width="100"}
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
 :::
 
-#  {background-image="images/gsi_background.jpg"}
+# [Questions?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
-::: columns
-::: {.column width="45%"}
-[**Questions?**]{style="font-size: 2em; color:#FFFFFF;"}
+::: {style="text-align: left; background-color: #EB7C32; padding:10px; border-radius: 25px; font-size: 1.2em; color:#FFFFFF;"}
+**Slides and code availabe at,** [github.com/hannahpodzorski/advocating-for-automation](github.com/hannahpodzorski/advocating-for-automation)
+:::
 
-::: {style="color:#FFFFFF;"}
+::: {style="text-align: left; font-size: 1em; color:#FFFFFF;"}
+
 ::: {layout="[[-1], [1], [-1]]"}
-**GitHub Repo:** 
-*github.com/* 
-*hannahpodzorski/* 
-*advocating-for-automation*
-:::
-:::
-:::
-
-::: {.column width="55%"}
-![](./images/gsi_logo_white.png){fig-align="right"}
-
-::: {style="text-align: right; background-color: #EB7C32; padding:10px; border-radius: 25px; font-size: 1em; color:#FFFFFF;"}
-Contact Information:
+::: columns
+::: {.column width="75%"}
+**Contact Information:**
 
 hpodzorski@gsi-net.com
 
 twitter - @hpodz
 
 github - hannahpodzorski
+:::
+
+::: {.column width="25%"}
+![](images/gsi_logo_white.png){fig-align="right"}
+:::
+
 :::
 :::
 :::
@@ -297,4 +334,3 @@ github - hannahpodzorski
 ::: {style="background-color: #EB7C32; padding:20px;"}
 # DISCLAIMER
 :::
-
