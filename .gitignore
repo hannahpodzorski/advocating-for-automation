@@ -27,3 +27,4 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 advocating-for-automation.Rproj
+./R/mermaid-diagrams.txt
