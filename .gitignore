@@ -26,4 +26,6 @@ vignettes/*.pdf
 *.knit.md
 # R Environment Variables
 .Renviron
+.gitignore
 advocating-for-automation.Rproj
+./R/mermaid-diagrams.txt
