@@ -3,7 +3,6 @@ format:
   revealjs: 
     theme: GSI_theme.scss
     logo: ./images/gsi_logo.png
-    self-contained: true
 ---
 
 #  {background-image="images/gsi_background.jpg"}
@@ -124,8 +123,8 @@ Automated Workflow
 ::: {style="color:#FFFFFF;"}
 -   Reproducibility
 -   It can be simple!
--   Saves time (in the long run)
--   Less human interactive means less errors
+-   Saves time
+-   Less human interaction means less errors
 :::
 
 ![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
@@ -281,14 +280,14 @@ print(pptx, "./R/Fig-Example.pptx")
 **Pros**
 
 -   Regulators are happy
--   Prevents human errors
+-   Reduces human error
 -   Saves time
 :::
 
 ::: {.column width="50%"}
 **Cons**
 
--   Not designed for longevity
+-   Stability of ProUCL
 -   Requires special set up
 :::
 :::
@@ -304,8 +303,8 @@ print(pptx, "./R/Fig-Example.pptx")
 
 ::: {style="color:#FFFFFF;"}
 -   It's ok to start small.
--   All skill sets welcome!
--   Ultimate goal is to leave more time for more important tasks.
+-   All skill sets are welcome!
+-   Ultimate goal is to leave more time for greater value tasks.
 :::
 
 ![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
