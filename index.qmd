@@ -294,13 +294,12 @@ print(pptx, "./R/Fig-Example.pptx")
 :::
 
 ::: {style="text-align: left; font-size: 1em; color:#FFFFFF;"}
-
 ::: {layout="[[-1], [1], [-1]]"}
 ::: columns
 ::: {.column width="75%"}
 **Contact Information:**
 
-hpodzorski@gsi-net.com
+hpodzorski\@gsi-net.com
 
 twitter - @hpodz
 
@@ -310,7 +309,6 @@ github - hannahpodzorski
 ::: {.column width="25%"}
 ![](images/gsi_logo_white.png){fig-align="right"}
 :::
-
 :::
 :::
 :::
