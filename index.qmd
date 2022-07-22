@@ -4,7 +4,6 @@ format:
     theme: GSI_theme.scss
     logo: ./images/gsi_logo.png
     self-contained: true
-editor: visual
 ---
 
 #  {background-image="images/gsi_background.jpg"}
@@ -274,6 +273,33 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+# [Was automation the way to go?]{style="color:#FFFFFF; font-size:1em"} {background-image="images/gsi_background.jpg"}
+
+::: {style="text-align: left; background-color: #EB7C32; padding:10px; border-radius: 25px; color:#FFFFFF;"}
+::: columns
+::: {.column width="50%"}
+**Pros**
+
+-   Regulators are happy
+-   Prevents human errors
+-   Saves time
+:::
+
+::: {.column width="50%"}
+**Cons**
+
+-   Not designed for longevity
+-   Requires special set up
+:::
+:::
+:::
+
+![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
+
+::: footer
+[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
 # [Final Thoughts]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
 ::: {style="color:#FFFFFF;"}
@@ -316,20 +342,4 @@ github - hannahpodzorski
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
-:::
-
-# Agenda
-
-::: {style="background-color: #005782; padding:10px; border-radius: 25px; color:#FFFFFF;"}
--   Developing a 'Pitch'
--   Where to start?
--   Unconventional Automation (Case Study)
-:::
-
-::: footer
-[Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
-:::
-
-::: {style="background-color: #EB7C32; padding:20px;"}
-# DISCLAIMER
 :::
