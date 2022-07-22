@@ -3,6 +3,7 @@ format:
   revealjs: 
     theme: GSI_theme.scss
     logo: ./images/gsi_logo.png
+    self-contained: true
 editor: visual
 ---
 
