@@ -10,4 +10,11 @@ Increasing quantity and types of available data and the need for more advance an
 
 [Example of exporting ggplot to PowerPoint](https://github.com/hannahpodzorski/advocating-for-automation/tree/main/R/02_officer-plot.R)
 
+**More Information -** 
+{openxlsx}: https://ycphs.github.io/openxlsx/
+{officer}: https://davidgohel.github.io/officer/
+{rvg}: https://davidgohel.github.io/rvg/
+ProUCL: https://www.epa.gov/land-research/proucl-software
+Mini-Mouse Macro: https://www.turnssoft.com/mini-mouse-macro
+
 Talk developed for rstudio:conf(2022)

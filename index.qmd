@@ -35,12 +35,20 @@ format:
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
 :::
 
+::: {.notes}
+I advocate for automation when I want to streamline the processing of data, so my team has more time to apply their technical knowledge to the problem at hand.
+:::
+
 # 
 
 ![[https://www.reddit.com/r/ProgrammerHumor/comments/f0ag3i/automation/]{style="color:#BFBFBF; font-size:0.5em"}](./images/automation_meme.png){fig-align="center" fig-alt="Confused anime dude meme, where he's a programmer confusing a basic task with something that needs automation."}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+::: {.notes}
+In addition to talking about how I use R to automate workflows. I’m also going to talk about how I reduce the activation energy needed to get my team on board. 
 :::
 
 ## Reducing the Activation Energy {auto-animate="true"}
@@ -66,12 +74,20 @@ p2
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+To help reduce activation energy when going from a current workflow to an automated work flow I (1) rephase how I pitch automation, (2) start small, and (3) get a little creative.
+:::
+
 # [Let's Start with the Pitch]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
 ![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+::: {.notes}
+When I say automation I mean streamlining a workflow by reducing the amount of unnecessary human interaction. With the ultimate goal of giving my team members more time for greater value tasks.
 :::
 
 ## Differences in Workflow {auto-animate="true"}
@@ -118,6 +134,10 @@ Automated Workflow
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+The difference between a typically workflow, or reactionary workflow, is that all work products (A-D) will need to be updated manually, while in an automated workflow updates only need to be made once.
+:::
+
 # [Pros of Automation]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
 ::: {style="color:#FFFFFF;"}
@@ -133,6 +153,10 @@ Automated Workflow
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
 :::
 
+::: {.notes}
+Automation not only saves you time, but it also can be simple (i.e. can be done with excel) and since less manual edits are being made there are less errors.
+:::
+
 # [Where to Start?]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
 ::: {style="color:#FFFFFF;"}
@@ -144,6 +168,10 @@ Automated Workflow
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+::: {.notes}
+Tasks I find easiest to automate are calculating summary statistics with R and using ggplot to create figures, instead of using excel.
 :::
 
 ## {openxlsx} {auto-animate="true"}
@@ -175,11 +203,18 @@ openxlsx::write.xlsx(data, "data.xlsx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+openxlsx allows you to read, write, and edit excel files in R. I use it to save data frames into excel rather then csv. This saves a lot of time by preventing the lose of work when a csv file is saved with unsupported edits. Also, you can use this package to create formatted excel tables that can be used in reports.
+
+More information: https://ycphs.github.io/openxlsx/
+:::
+
 ## {officer}
 
 ::: {layout="[[-1], [1], [-1]]"}
 ```{r, eval = FALSE, echo = TRUE}
 library(officer)
+library(rvg)
 
 plot <- rvg::dml(ggobj = plot)
 
@@ -193,6 +228,13 @@ print(pptx, "./R/Fig-Example.pptx")
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+::: {.notes}
+officer allows you to manipulation Word and PowerPoint documents. Using officer with the rvg package allow users to edit the graphics that are exported with officer.
+
+More informatin on officer: https://davidgohel.github.io/officer/
+More information on the rvg package: https://davidgohel.github.io/rvg/
 :::
 
 ## {officer} {auto-animate="true"}
@@ -216,6 +258,13 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+officer allows you to manipulation Word and PowerPoint documents. Using officer with the rvg package allow users to edit the graphics that are exported with officer.
+
+More informatin on officer: https://davidgohel.github.io/officer/
+More information on the rvg package: https://davidgohel.github.io/rvg/
+:::
+
 ## {officer}
 
 <iframe width="100%" height="100%" src="./images/officer_example.mp4" frameborder="0">
@@ -226,12 +275,20 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+With officer you can also edit Powerpoint templates, which can be used to add figure numbers and captions or additional text.
+:::
+
 # [Delayed<br>Gratification]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
 
 ![](./images/gsi_logo_white.png){.absolute top="-1em" right="0" width="100"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+::: {.notes}
+Once I’ve proven myself with these small changes, I then try adding in more tasks that require more initial investment, but will save time if used multiple times.
 :::
 
 ## ProUCL
@@ -254,6 +311,12 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+ProUCL is used for calculating statistics on data with and without non-detect observations,as know as left censored data. This includes simple statistics like the mean and more advance statistics like the Upper Confidence Limits. It's used frequently in environmental risk assessments where we look at the impact chemicals in the environment can have on wildlife and humans in the area.
+
+More information: https://www.epa.gov/land-research/proucl-software
+:::
+
 ## ProUCL Automation
 
 <iframe width="100%" height="100%" src="./images/ProUCL_Demo.mp4" frameborder="0">
@@ -264,12 +327,22 @@ print(pptx, "./R/Fig-Example.pptx")
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
 :::
 
+::: {.notes}
+We wrote a function in R that subset our data in to manageable chucks and then creates an input file that is passed to Mini-Mouse Macro and excuted. Once the output file is saved ProUCl is closed.
+
+More information on Mini-Mouse Macro: https://www.turnssoft.com/mini-mouse-macro.html
+:::
+
 ## ProUCL Output
 
 ![[Data from California's Groundwater Ambient Monitoring and Assessment Program (GAMA). Downloaded 2022-07-11.]{style="font-size: 0.5em; color:#6f6f6f"}](./images/ProUCL_Output.png){fig-align="center" fig-alt="Example of the output file from ProUCL"}
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#BFBFBF;"}
+:::
+
+::: {.notes}
+We also wrote code that parsed the output file produces by ProUCL, which saved a lot of copy and pasting time.
 :::
 
 # [Was automation the way to go?]{style="color:#FFFFFF; font-size:1em"} {background-image="images/gsi_background.jpg"}
@@ -297,6 +370,10 @@ print(pptx, "./R/Fig-Example.pptx")
 
 ::: footer
 [Hannah Podzorski // rstudio::conf(2022) // July 27, 2022]{style="color:#FFFFFF;"}
+:::
+
+::: {.notes}
+For our purposes we think the automation was successful. It saved us time, while still allowing us to use software that is considered industry standard. It is not perfect and could be improved, but work for what we need it for.
 :::
 
 # [Final Thoughts]{style="color:#FFFFFF;"} {background-image="images/gsi_background.jpg"}
