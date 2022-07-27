@@ -243,6 +243,7 @@ More information on the rvg package: https://davidgohel.github.io/rvg/
 ```{r, eval = FALSE, echo = TRUE}
 #| code-line-numbers: "3"
 library(officer)
+library(rvg)
 
 plot <- rvg::dml(ggobj = plot)
 
